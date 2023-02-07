@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Forms-->
+        <div class="box-2">
+            <div class="login-form-container">
+                    <h1>Login Form</h1>
+                    <input type="text" id="username" placeholder="Username" class="input-field">
+                    <br><br>
+                    <input type="password" id="password" placeholder="Password" class="input-field">
+                    <br><br>
+                    <button class="login-button" onclick="login()">Login</button>
+                    <a href="/signup.html">Signup</a>
+            </div>
+        </div>
+
+        <script>
+            function login() {
+                    let username = document.getElementById('username').value;
+                    let password = document.getElementById('password').value;
+                    $.post("http://localhost:8088/api/user/login", { username: username, password: password }, function (res) {
+                        alert(res.message);
+                        if(res.status)
+                        {
+                            window.location.href = "/chat.html";
+                        }
+                    })  .done(function( data ) {
+    alert( "Data Loaded: " + data );});
+
+            };
+        </script>
+</body>
+
+</html>

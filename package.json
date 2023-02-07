@@ -1,0 +1,31 @@
+{
+  "name": "101295960_lab_test1_chat_app",
+  "version": "1.0.0",
+  "description": "Full Stack Development Chap App Lab Test 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anik1204/101295960_lab_test1_chat_app.git"
+  },
+  "author": "Abdur Rahman Fahad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anik1204/101295960_lab_test1_chat_app/issues"
+  },
+  "homepage": "https://github.com/anik1204/101295960_lab_test1_chat_app#readme",
+  "dependencies": {
+    "@withvoid/make-validation": "^1.0.5",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.6.0",
+    "socketio": "^1.0.0",
+    "uuid": "^9.0.0"
+  }
+}
